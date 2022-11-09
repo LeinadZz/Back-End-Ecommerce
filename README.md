@@ -106,7 +106,7 @@ https://user-images.githubusercontent.com/109697090/200842223-280a034d-5f41-4a78
 
 ## Links to videos
 
-# Walkthrough Video Link
+### Walkthrough Video Link
 
 https://drive.google.com/file/d/1ckE6m1xQbjf-xof0MzDOTlq0hiE885LW/view
 
