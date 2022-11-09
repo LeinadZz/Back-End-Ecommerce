@@ -16,12 +16,24 @@ router.get('/', (req, res) => {
   // be sure to include its associated Product data
   .then((tags) => res.status(200).json(tags))
   .catch((err) => res.status(500).json(err));
-
 });
 
 router.get('/:id', (req, res) => {
   // find a single tag by its `id`
+  Tag.findOne({
+    where: {
+      id: req.params.id
+    },
+    include: [
+      {
+        model: Product,
+        through: ProductTag
+      }
+    ]
+  })
   // be sure to include its associated Product data
+  .then((tag) => res.status(200).json(tag))
+  .catch((err) => res.status(404).json(err));
 });
 
 router.post('/', (req, res) => {
