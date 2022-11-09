@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { RegisterSlave } = require('mysql2/lib/commands');
 const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
@@ -35,6 +36,13 @@ router.post('/', (req, res) => {
 
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
+  Category.update(req.body, {
+    where: {
+      id: req.params.id
+    }
+  })
+  .then((category) => res.status(200).json(category))
+  .catch((err) => res.status(400).json(err));
 });
 
 router.delete('/:id', (req, res) => {
