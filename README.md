@@ -1,6 +1,5 @@
 # Backend Ecommerce
-In this challenge we created a command-line application from scratch that takes in information about employees on a team to then generate an HTML page that displays summaries for each person.. This project utilizes [Node.js](https://nodejs.org/en/) to power the back-end of this application, [Inquirer](https://www.npmjs.com/package/inquirer) to ask questions to help the user build their roster, 
-and [Fs](https://www.npmjs.com/package/fs) to help write and read files.
+
 
 ## Table of Contents
     
